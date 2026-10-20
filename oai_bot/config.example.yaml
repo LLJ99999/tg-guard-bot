@@ -1,0 +1,44 @@
+bot:
+  observe_only: false              # true = 只记录不处罚，适合先观察几天
+  token: "123456:ABC-xxxx"         # @BotFather 新建一个机器人（不要和 AstrBot、jack_chuanhua_bot 共用 token）
+  mode: polling                    # polling | webhook
+  owner_ids: [123456789]           # 你的 TG 用户 ID：任意群可用管理命令、/gban 全局封禁
+  allowed_groups: []               # 只允许这些群使用，如 [-1001234567890]；留空表示不限制
+  log_chat_id: 0                   # 操作日志发到哪个频道 / 群（机器人需能发言），0 不记录
+  timezone: "Asia/Shanghai"        # 夜间模式、定时消息、统计用的时区
+
+web:
+  listen: ":8080"
+  public_url: ""                   # 公网 HTTPS 地址（Mini App 验证页必须），如 https://guard.example.com
+
+# 入群验证用的人机验证，至少配一个；可以和 jack_chuanhua_bot 用同一套 Turnstile（站点里加上新域名即可）
+captcha:
+  turnstile:
+    site_key: ""
+    secret: ""
+  cap:
+    url: ""
+    site_key: ""
+    secret: ""
+
+cas:
+  enabled: true                    # CAS 共享黑名单 https://cas.chat
+  api: "https://api.cas.chat/check"
+
+# AI 审核：任意 OpenAI 兼容接口，可以填 AstrBot 正在用的同一个模型 / 中转
+ai:
+  base_url: ""                     # 如 https://api.deepseek.com/v1
+  api_key: ""
+  model: ""                        # 如 deepseek-chat；便宜快速的小模型就够
+  threshold: 0.8                   # 置信度 ≥ 此值才封禁
+  timeout_sec: 15
+
+db:
+  path: "data/oai_bot.db"
+
+# 环境变量可覆盖，如 OAI_BOT_TOKEN、OAI_AI_API_KEY
+
+# 内网管理接口，给 AstrBot 面板插件用。只在 Docker 内网监听，不要映射到公网
+admin:
+  listen: ":8090"                  # 留空不开启
+  token: ""                        # 至少 16 位随机字符串，插件里填同一个
