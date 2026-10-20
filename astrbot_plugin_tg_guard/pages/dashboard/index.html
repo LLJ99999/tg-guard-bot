@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>TG 群管面板</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="side">
+        <div class="brand">
+          <div class="logo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <div><b>TG 群管</b><small id="botname">未连接</small></div>
+        </div>
+        <nav id="nav"></nav>
+        <div class="side-foot" id="sidefoot"></div>
+      </aside>
+      <div class="main">
+        <header class="bar">
+          <div class="bar-title"><h1 id="title">概览</h1><p id="subtitle" class="muted"></p></div>
+          <div class="bar-right" id="barright"></div>
+        </header>
+        <main id="view"><div class="skeleton"></div><div class="skeleton"></div></main>
+      </div>
+    </div>
+    <div id="savebar" class="savebar" hidden>
+      <span id="savecount">有未保存的修改</span>
+      <button class="ghost" id="saveundo">撤销</button>
+      <button class="pri" id="savego">保存</button>
+    </div>
+    <div id="modal" class="modal" hidden>
+      <div class="modal-card">
+        <h3 id="modal-title"></h3>
+        <p id="modal-text" class="muted"></p>
+        <div class="modal-actions"><button class="ghost" id="modal-no">取消</button><button class="pri" id="modal-yes">确定</button></div>
+      </div>
+    </div>
+    <div id="toast" hidden></div>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
