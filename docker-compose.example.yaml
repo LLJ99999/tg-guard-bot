@@ -1,0 +1,13 @@
+# 最小部署：cp oai_bot/config.example.yaml config.yaml，填好 token / owner_ids 后
+# docker compose -f docker-compose.example.yaml up -d --build
+services:
+  oai-bot:
+    build: ./oai_bot
+    container_name: oai-bot
+    restart: unless-stopped
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+      - ./data:/app/data
+    ports:
+      - "127.0.0.1:8080:8080"   # 验证页（Mini App），用 Nginx/Caddy 反代成 HTTPS 后填到 web.public_url
+    # 管理接口 :8090 只给同网络的 AstrBot 用，不要映射到公网
