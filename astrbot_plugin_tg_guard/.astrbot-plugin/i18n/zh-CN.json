@@ -1,0 +1,16 @@
+{
+  "metadata": {},
+  "config": {},
+  "pages": {
+    "dashboard": {
+      "title": "TG 群管面板",
+      "description": "管理 oai_bot 群管机器人和 jack_chuanhua_bot 私聊中继。"
+    }
+  },
+  "views": {
+    "dashboard": {
+      "title": "TG 群管面板",
+      "description": "管理 oai_bot 群管机器人和 jack_chuanhua_bot 私聊中继。"
+    }
+  }
+}
