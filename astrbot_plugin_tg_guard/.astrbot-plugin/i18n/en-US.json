@@ -1,0 +1,16 @@
+{
+  "metadata": {},
+  "config": {},
+  "pages": {
+    "dashboard": {
+      "title": "TG Guard Panel",
+      "description": "Manage the oai_bot group guard and the jack_chuanhua_bot relay."
+    }
+  },
+  "views": {
+    "dashboard": {
+      "title": "TG Guard Panel",
+      "description": "Manage the oai_bot group guard and the jack_chuanhua_bot relay."
+    }
+  }
+}
