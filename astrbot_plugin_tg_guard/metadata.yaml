@@ -1,0 +1,9 @@
+name: astrbot_plugin_tg_guard
+display_name: TG 群管与中继面板
+desc: 在 AstrBot 后台管理 oai_bot（群管）和 jack_chuanhua_bot（私聊中继）：群设置、屏蔽词、笔记、自动回复、定时消息、白名单、封禁、统计、日志、访客管理。
+version: v1.4.0
+author: jack
+repo: "https://github.com/LLJ99999/tg-guard-bot"
+astrbot_version: '>=4.26.0'
+support_platforms:
+  - telegram
