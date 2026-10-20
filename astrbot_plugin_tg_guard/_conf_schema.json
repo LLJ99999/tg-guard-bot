@@ -1,0 +1,7 @@
+{
+  "oai_url": {"description": "oai_bot 管理接口地址", "type": "string", "default": "http://oai-bot:8090", "hint": "Docker 内网地址，对应 oai_bot 配置 admin.listen"},
+  "oai_token": {"description": "oai_bot 管理 token", "type": "string", "default": "", "hint": "与 oai_bot 配置 admin.token 相同，至少 16 位"},
+  "jack_url": {"description": "jack_chuanhua_bot 管理接口地址", "type": "string", "default": "http://jack-bot:8090", "hint": "留空则面板不显示私聊中继"},
+  "jack_token": {"description": "jack_chuanhua_bot 管理 token", "type": "string", "default": ""},
+  "timeout_sec": {"description": "请求超时（秒）", "type": "int", "default": 15}
+}
