@@ -2,6 +2,8 @@
 
 ![version](https://img.shields.io/badge/version-v1.17.0-blue) ![go](https://img.shields.io/badge/Go-1.26+-00ADD8) ![license](https://img.shields.io/badge/license-MIT-green)
 
+简体中文 | [English](README.en.md)
+
 一个用 Go 写的 Telegram 群管理机器人，对标 Rose / GroupHelp / nmbot：入群人机验证、反广告、AI 审核、自学习、抽奖、积分、笔记、定时广告，外加 Telegram 内置的 **Mini App 管理面板**。单二进制 + SQLite，一个 Docker 容器就能跑。
 
 仓库里还带两个可选的 AstrBot 插件：把全部设置搬进 AstrBot 后台的「TG 群管面板」，以及群友投票给站长打电话的「呼叫站长」。
@@ -156,6 +158,10 @@ go build -o oai_bot ./cmd/oai_bot
 
 ## 参与贡献
 欢迎 Fork 本仓库后提交 Pull Request。提 Issue 时请附上版本号和复现步骤，**不要贴出 Token 或配置文件**。
+
+## 贡献者
+- [LLJ99999](https://github.com/LLJ99999) · 作者
+- [Claude](https://claude.ai)（Anthropic）· 参与开发与文档
 
 ## License
 [MIT](LICENSE) © 2026 LLJ99999
