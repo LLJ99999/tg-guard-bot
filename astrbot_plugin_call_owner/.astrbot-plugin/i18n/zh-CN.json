@@ -1,0 +1,16 @@
+{
+ "metadata": {},
+ "config": {},
+ "pages": {
+  "dashboard": {
+   "title": "呼叫站长面板",
+   "description": "通话记录、当前呼叫、规则设置。"
+  }
+ },
+ "views": {
+  "dashboard": {
+   "title": "呼叫站长面板",
+   "description": "通话记录、当前呼叫、规则设置。"
+  }
+ }
+}

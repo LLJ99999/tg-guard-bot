@@ -1,0 +1,9 @@
+name: astrbot_plugin_call_owner
+display_name: 呼叫站长 · 电话叫醒
+desc: 群里多人点按钮或发 /call 就通过喵提醒给站长打电话；定时发按钮消息、通话记录、规则面板。
+version: v1.0.0
+author: jack
+repo: ""
+astrbot_version: '>=4.26.0'
+support_platforms:
+  - telegram

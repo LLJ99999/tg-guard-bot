@@ -1,0 +1,85 @@
+{
+ "miao_id": {
+  "description": "喵提醒喵码",
+  "type": "string",
+  "default": "",
+  "hint": "喵提醒里创建「语音电话」提醒后得到的 t 开头编码，不要填整条网址"
+ },
+ "threshold": {
+  "description": "触发人数",
+  "type": "int",
+  "default": 5
+ },
+ "window_min": {
+  "description": "统计窗口（分钟）",
+  "type": "int",
+  "default": 10
+ },
+ "cooldown_min": {
+  "description": "打通后冷却（分钟）",
+  "type": "int",
+  "default": 30
+ },
+ "fail_cooldown_min": {
+  "description": "拨号失败后冷却（分钟）",
+  "type": "int",
+  "default": 2
+ },
+ "group_ids": {
+  "description": "允许的群 ID",
+  "type": "string",
+  "default": "-1003748822917",
+  "hint": "多个用英文逗号分隔；留空=所有群；定时消息也发到这些群"
+ },
+ "owner_ids": {
+  "description": "站长 TG 用户 ID",
+  "type": "string",
+  "default": "7874073682",
+  "hint": "可用 /awake 表示已醒"
+ },
+ "blacklist_ids": {
+  "description": "禁止呼叫的用户 ID",
+  "type": "string",
+  "default": ""
+ },
+ "active_hours": {
+  "description": "可呼叫时段",
+  "type": "string",
+  "default": "",
+  "hint": "如 00:00-09:00,13:00-14:00；留空=全天"
+ },
+ "voice_template": {
+  "description": "电话语音内容",
+  "type": "text",
+  "default": "{group}有{count}位群友呼叫站长，请尽快上线处理。",
+  "hint": "可用 {group} {count} {names} {time}"
+ },
+ "schedule_enabled": {
+  "description": "开启定时发送按钮消息",
+  "type": "bool",
+  "default": false
+ },
+ "schedule_times": {
+  "description": "定时发送时间",
+  "type": "string",
+  "default": "23:30",
+  "hint": "北京时间，多个用逗号，如 23:30,03:00"
+ },
+ "schedule_text": {
+  "description": "定时消息内容",
+  "type": "text",
+  "default": "🌙 站长可能已经睡了。\n网站出问题需要叫醒站长，就点下面的按钮：{window}分钟内满{threshold}人点，会直接给站长打电话。\n请勿恶作剧，每次通话都有记录。",
+  "hint": "可用 {threshold} {window} {cooldown}"
+ },
+ "button_text": {
+  "description": "按钮文字",
+  "type": "string",
+  "default": "📞 叫醒站长"
+ },
+ "platform_id": {
+  "description": "Telegram 平台 ID",
+  "type": "string",
+  "default": "",
+  "hint": "留空=第一个 Telegram 平台"
+ }
+}

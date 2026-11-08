@@ -2,6 +2,6 @@ config.yaml
 data/
 *.db
 *.db-*
-/oai_bot/oai_bot
+/tg-guard/oai_bot/oai_bot
 __pycache__/
 .env

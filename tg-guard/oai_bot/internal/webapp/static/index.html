@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <title>群管理面板</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="tb">
+      <button class="gsw" id="gsw" type="button" aria-label="切换群"></button>
+      <nav class="tnav" id="tnav" aria-label="主导航"></nav>
+      <div class="tb-r">
+        <button class="searchbtn" id="searchbtn" type="button"></button>
+        <button class="icon-btn msearch" id="msearch" type="button" title="搜索"></button>
+      </div>
+    </header>
+    <div class="pg">
+      <section class="col-l" id="colL">
+        <h1 id="ltitle">动态</h1>
+        <p class="lead" id="llead"></p>
+        <div id="list"></div>
+      </section>
+      <section class="col-r" id="colR">
+        <div class="dhead">
+          <button class="back" id="back" type="button"><svg width="12" height="20" viewBox="0 0 12 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2 2 10l8 8"/></svg><span id="backlbl">返回</span></button>
+          <div class="dt"><h2 id="dtitle"></h2><p id="dsub"></p></div>
+        </div>
+        <main id="view"><div class="skeleton"></div><div class="skeleton"></div></main>
+      </section>
+    </div>
+    <nav id="dock" class="dock" aria-label="底部导航"></nav>
+    <div hidden><span id="botname"></span><span id="sidefoot"></span><button id="themebtn" type="button"></button></div>
+    <div id="savebar" class="savebar" hidden>
+      <span class="savebar-dot"></span>
+      <span id="savecount">有未保存的修改</span>
+      <button class="ghost" id="saveundo">撤销</button>
+      <button class="pri" id="savego">保存修改</button>
+    </div>
+    <div id="modal" class="modal" hidden>
+      <div class="modal-card">
+        <h3 id="modal-title"></h3>
+        <div id="modal-text" class="muted"></div>
+        <div class="modal-actions"><button class="ghost" id="modal-no">取消</button><button class="pri" id="modal-yes">确定</button></div>
+      </div>
+    </div>
+    <div id="toast" hidden></div>
+    <script src="./miniapp.js"></script>
+    <script src="./app.js" defer></script>
+  </body>
+</html>

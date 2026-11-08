@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>呼叫站长面板</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="logo">📞</span><div><b>呼叫站长</b><small id="sub">加载中…</small></div></div>
+    <nav id="tabs">
+      <button data-tab="overview" class="on">概览</button>
+      <button data-tab="calls">通话记录</button>
+      <button data-tab="rules">规则设置</button>
+    </nav>
+  </header>
+  <main id="view"><div class="card muted">加载中…</div></main>
+  <div id="modal" class="modal" hidden>
+    <div class="modal-card"><h3 id="m-title"></h3><div id="m-text" class="muted"></div>
+      <div class="row end"><button id="m-no" class="ghost">取消</button><button id="m-yes" class="pri">确定</button></div></div>
+  </div>
+  <div id="toast" hidden></div>
+  <script src="./app.js"></script>
+</body>
+</html>

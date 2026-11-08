@@ -1,8 +1,8 @@
-# 最小部署：cp oai_bot/config.example.yaml config.yaml，填好 token / owner_ids 后
+# 最小部署：cp tg-guard/oai_bot/config.example.yaml config.yaml，填好 token / owner_ids 后
 # docker compose -f docker-compose.example.yaml up -d --build
 services:
   oai-bot:
-    build: ./oai_bot
+    build: ./tg-guard/oai_bot
     container_name: oai-bot
     restart: unless-stopped
     volumes:
